@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-inter text-gray-800 bg-coconut-white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-playfair;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 bg-leaf-green text-white rounded-lg font-semibold transition-all duration-300 hover:bg-dark-green hover:shadow-lg hover:scale-105 active:scale-95;
+    }
+
+    .btn-secondary {
+        @apply px-6 py-3 bg-transparent border-2 border-leaf-green text-leaf-green rounded-lg font-semibold transition-all duration-300 hover:bg-leaf-green hover:text-white hover:shadow-lg hover:scale-105 active:scale-95;
+    }
+
+    .card {
+        @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+    }
+
+    .glass-card {
+        @apply bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6 border border-white/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+    }
+
+    .section-title {
+        @apply text-4xl md:text-5xl font-bold text-earth-brown mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-lg md:text-xl text-gray-600 max-w-2xl mx-auto;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-gradient-to-r from-leaf-green to-light-green bg-clip-text text-transparent;
+    }
+
+    .bg-gradient-coconut {
+        @apply bg-gradient-to-br from-leaf-green via-light-green to-earth-brown;
+    }
+
+    .smooth-scroll {
+        scroll-behavior: smooth;
+    }
+
+    .bg-coconut-trees {
+        background-image: url('/top-view-coconut-trees-field-600nw-2445504585.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .bg-overlay {
+        background-color: rgba(255, 255, 255, 0.92);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #EDE6D8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2F6B4F;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1a4d35;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
