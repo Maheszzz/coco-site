@@ -23,7 +23,7 @@ const ContactForm = () => {
 
         // REPLACE THESE VALUES WITH YOUR ACTUAL EMAILJS KEYS
         const SERVICE_ID = 'service_ugblcfo';
-        const TEMPLATE_ID = 'template_rlz6ymb';
+        const TEMPLATE_ID = 'template_tx0y5ee';
         const PUBLIC_KEY = 'mZdtwyqEPQTteq9tE';
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
@@ -33,7 +33,7 @@ const ContactForm = () => {
                 setFormData({ name: '', email: '', message: '' });
             }, (error) => {
                 console.log(error.text);
-                alert('Oops! Something went wrong. Please try again later.');
+                alert(`Failed to send message: ${error.text || error.message || 'Unknown error'}`);
             })
             .finally(() => {
                 setIsSubmitting(false);

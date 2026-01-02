@@ -66,8 +66,8 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-earth-brown mb-1">Email</h3>
-                                            <p className="text-gray-600">info@coconutbusiness.com</p>
-                                            <p className="text-gray-600">sales@coconutbusiness.com</p>
+                                            <p className="text-gray-600">est.coco.2026@gmail.com</p>
+                                            <p className="text-gray-600">deva.coco.2026@gmail.com</p>
                                         </div>
                                     </div>
 
@@ -77,8 +77,8 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-earth-brown mb-1">Phone</h3>
-                                            <p className="text-gray-600">+1 (555) 123-4567</p>
-                                            <p className="text-gray-600">+1 (555) 987-6543</p>
+                                            <p className="text-gray-600">+91 9384714262</p>
+                                            <p className="text-gray-600">+91 8056344262</p>
                                         </div>
                                     </div>
 
@@ -89,9 +89,8 @@ const Contact = () => {
                                         <div>
                                             <h3 className="font-bold text-earth-brown mb-1">Location</h3>
                                             <p className="text-gray-600">
-                                                123 Coconut Grove Avenue<br />
-                                                Tropical Business Park<br />
-                                                Paradise City, PC 12345
+                                                Eghiteen siddhars traders<br />
+                                                Udumalaipettai, PC 642126
                                             </p>
                                         </div>
                                     </div>
@@ -102,9 +101,9 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-earth-brown mb-1">Business Hours</h3>
-                                            <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                            <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
-                                            <p className="text-gray-600">Sunday: Closed</p>
+                                            <p className="text-gray-600">Monday - Friday: 6:00 AM - 11:00 PM</p>
+                                            <p className="text-gray-600">Saturday: 6:00 AM - 11:00 PM</p>
+                                            <p className="text-gray-600">Sunday: 6:00 AM - 11:00 PM</p>
                                         </div>
                                     </div>
                                 </div>
