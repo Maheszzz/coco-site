@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -16,14 +19,29 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
-        alert('Thank you for contacting us! We will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitting(true);
+
+        // REPLACE THESE VALUES WITH YOUR ACTUAL EMAILJS KEYS
+        const SERVICE_ID = 'service_ugblcfo';
+        const TEMPLATE_ID = 'template_rlz6ymb';
+        const PUBLIC_KEY = 'mZdtwyqEPQTteq9tE';
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                alert('Thank you for contacting us! We will get back to you soon.');
+                setFormData({ name: '', email: '', message: '' });
+            }, (error) => {
+                console.log(error.text);
+                alert('Oops! Something went wrong. Please try again later.');
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+            });
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
             <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -78,9 +96,10 @@ const ContactForm = () => {
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-full btn-primary text-lg"
+                disabled={isSubmitting}
+                className="w-full btn-primary text-lg disabled:opacity-70 disabled:cursor-not-allowed"
             >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
         </form>
     );

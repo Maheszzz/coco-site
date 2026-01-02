@@ -6,29 +6,17 @@ const FeaturedProducts = () => {
         {
             image: '/coconutoil.png',
             name: 'Coconut Oil',
-            _description_1: 'Premium cold-pressed coconut oil is rich in natural nutrients and ideal for healthy cooking, skincare, and hair care.',
-            get description() {
-                return this._description_1;
-            },
-            set description(value) {
-                this._description_1 = value;
-            },
+            description: 'Premium cold-pressed coconut oil is rich in natural nutrients and ideal for healthy cooking, skincare, and hair care.',
         },
         {
             image: '/coco-nut.jpeg',
-            name: 'Coconut ',
+            name: 'Coconut',
             description: 'Coconut is a tropical fruit with rich, creamy flesh, commonly used to make coconut milk, cream, and oil for curries, desserts, and dairy-free dishes.',
         },
         {
             image: '/greencoconut.jpg',
             name: 'Green Coconut',
-            _description: 'Green coconut is a tropical fruit with a hard outer shell and a sweet, juicy flesh, commonly used in Southeast Asian cuisine.',
-            get description() {
-                return this._description;
-            },
-            set description(value) {
-                this._description = value;
-            },
+            description: 'Green coconut is a tropical fruit with a hard outer shell and a sweet, juicy flesh, commonly used in Southeast Asian cuisine.',
         },
     ];
 

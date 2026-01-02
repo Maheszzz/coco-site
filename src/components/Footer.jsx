@@ -37,7 +37,7 @@ const Footer = () => {
                             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                 <span className="text-2xl">🥥</span>
                             </div>
-                            <span className="font-playfair text-2xl font-bold">CocoNut</span>
+                            <span className="font-playfair text-2xl font-bold">Eighteen Siddhars Traders</span>
                         </div>
                         <p className="text-white/80 mb-4">
                             Premium coconut products from sustainable sources. Bringing pure coconut goodness to the world.
